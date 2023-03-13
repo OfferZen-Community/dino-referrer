@@ -30,13 +30,13 @@ If you sign up using my link, I'll get rewards from OfferZen and you'll also get
       document.getElementById('msg').value = items.referralMessage;
       if (items.referralCode != 'Not set yet'){
         document.getElementById('headerCodeStatus').innerHTML = `<div class="code_present">🟢 Ready to refer. Your code is <span id="headerStatusCode"></span></div>`
+        document.getElementById('headerStatusCode').textContent = items.referralCode;
       }
-      document.getElementById('headerStatusCode').textContent = items.referralCode;
+
     });
   }
   function setAccordians(){
     var acc = document.getElementsByClassName("accordion");
-    console.log(acc.lenghth)
     var i;
     
     for (i = 0; i < acc.length; i++) {
