@@ -17,10 +17,8 @@ chrome.runtime.onInstalled.addListener(({ reason, version }) => {
 
   
   chrome.webNavigation.onHistoryStateUpdated.addListener(details => {
-    console.log("executing")
     if (details.url.indexOf('linkedin.com/messaging') !== -1) {
       // Execute the 'linkedin.js' content script in the current tab
-      console.log("is linkedin messaging page")
       const tabId = details.tabId
       chrome.scripting.executeScript({
       target : {tabId : tabId},
@@ -29,11 +27,6 @@ chrome.runtime.onInstalled.addListener(({ reason, version }) => {
     }
   }, { url: [{ hostEquals: 'www.linkedin.com' }] });
   
-//   async function getTabId() {
-//     let queryOptions = { active: true, lastFocusedWindow: true };
-//     // `tab` will either be a `tabs.Tab` instance or `undefined`.
-//     let [tab] = await chrome.tabs.query(queryOptions);
-//     return tab.id;
-//   }
+
   
   
