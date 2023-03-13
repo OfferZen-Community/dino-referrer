@@ -1,2 +1,3 @@
-# dino-referrer
-A chrome extension where developers can turn reach out into rewards.
+Welcome to the LinkedIn Referrer :)
+
+Readme to be udpated in due course.

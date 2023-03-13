@@ -1,0 +1,203 @@
+body {
+    margin: 0px;
+    font-family: 'Proxima Nova', sans-serif;
+}
+
+/* Grid */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+  }
+  
+  /* Header */
+  
+  header {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #132254;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    height: 30px;
+    margin-right: 20px;
+  }
+    /* Status */
+.status {
+    color: white;
+    text-align: right;
+  }
+
+.status a {
+    color: white;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+  
+  /* Banner */
+  
+  .banner {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px 20px;
+    background-color: #e5e5e5;
+  }
+  
+  .banner-image {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .banner-text {
+    text-align: center;
+  }
+  
+  .banner-text h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .banner-text p {
+    font-size: 18px;
+  }
+  
+  /* How-to areas*/
+  
+  .how-to {
+    grid-column: 1 / -1;
+    padding: 40px 20px;
+  }
+  
+  .how-to h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .how-to-steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    margin: 0 20px 20px 20px;
+  }
+  
+  .icon {
+    height: 75px;
+    margin-bottom: 10px;
+  }
+  
+  .process_icon {
+    width: 150px;
+    margin-bottom: 10px;
+  }
+
+  .step h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .step p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+/*  Rewards */
+.how-to.steps {
+    background-color: #e4ebef;
+}
+
+
+/* Terms area */
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+  }
+
+  /* Terms and conditions */
+  
+  .terms {
+    grid-column: 1 / -1;
+    padding: 40px 20px;
+    background-color: #e4ebef;
+  }
+  
+  .terms h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+
+
+  /* Footer */
+  
+  footer {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #132254;
+    color: white;
+  }
+
+  footer a {
+color: white;
+  }
+
+  .footer-container {
+    text-align: center;
+  }
+  .footer-container img {
+    max-width: 100px;
+    margin: 20px;
+  }
+
+  .footer-col {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px
+  }

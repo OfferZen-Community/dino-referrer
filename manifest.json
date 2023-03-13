@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "OfferZen Dino Referrer",
+  "version": "1.0",
+  "icons": {
+    "16": "img/dinocorn.png",
+    "32": "img/dinocorn.png",
+    "48": "img/dinocorn.png",
+    "128": "img/dinocorn.png"
+  },
+  "description": "Refer companies for OfferZen rewards and cash",
+  "action": {},
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "linkedin.js"
+    ],
+      "matches": [
+        "https://www.linkedin.com/messaging*"
+      ]
+    },
+    {
+        "js": [
+          "offerzen.js"
+      ],
+        "matches": [
+          "https://www.offerzen.com/candidate/*"
+        ]
+      }
+
+  ],
+  "permissions": [
+    "storage",
+    "tabs",
+    "scripting",
+    "webNavigation",
+    "activeTab"
+  ],
+ "host_permissions": ["*://www.linkedin.com/*"],
+  "options_page": "options.html"
+}

@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offerzen Rewards Extension</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.cdnfonts.com/css/proxima-nova-2" rel="stylesheet">
+
+</head>
+<body>
+  <header>
+    <img src="img/logo_white.png" alt="Offerzen Dinocorn" class="logo">
+    <div class="status" id="headerCodeStatus">
+    <div class="no_code">🔴 No referral code stored. <a href="https://www.offerzen.com/candidate/referral_redirect" target="_blank">Fetch it here</a> then refresh this page.</div>
+    </div>
+  </header>
+  <main>
+    <div class="how-to rewards">
+      <div class="banner-text">
+        <img src="img/dino_gift.png" alt="Offerzen Dinocorn" class="welcome_image">
+        <h2>Turn "Reach Outs" into Rewards</h2>
+        <p>When you're not looking for work, you can refer companies that reach out to you on LinkedIn and earn rewards and money!</p>
+        <br><br>
+      </div>
+      <div class="how-to-steps">
+        <div class="step">
+          <img src="img/shirt.png" alt="Shirt" class="icon">
+          <h3>1 Company fills in the contact form</h3>
+          <p>Get a sweet OfferZen Shirt</p>
+        </div>
+        <div class="step">
+          <img src="img/gift.png" alt="gift" class="icon">
+          <h3>5 companies fill in the contact form</h3>
+          <p>Upgrade the swag and get and OfferZen gift pack</p>
+        </div>
+        <div class="step">
+          <img src="img/money_bag.png" alt="money" class="icon">
+          <h3>A company signs up for an OfferZen subscription</h3>
+          <p>European companies get you €1337,<br> SA companies R10 000</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="how-to steps">
+      <h2>How to use the Offerzen Rewards Extension</h2>
+      <br><br>
+      <div class="how-to-steps">
+        <div class="step">
+          <img src="img/dino_comp.png" alt="Dinocorn at Computer" class="process_icon">
+          <h3>Step 1</h3>
+          <p>Fetch your ReferralCode from your OfferZen profile. You'll need to log in.</p>
+        </div>
+        <div class="step">
+          <img src="img/dino_mail.png" alt="Dinocorn sorting mail" class="process_icon">
+          <h3>Step 2</h3>
+          <p>Simply click the dino extension icon to prefill a response to people trying to recruit you</p>
+        </div>
+        <div class="step">
+          <img src="img/dino_money.png" alt="Dinocorn with Money" class="process_icon">
+          <h3>Step 3</h3>
+          <p>That's it! You'll be notified when you earn rewards on you your OfferZen email address</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="how-to">
+      <h2>Extension Settings</h2>
+      <div style="text-align: center;">
+      <button id="save"  style="margin: auto;">Save Changes</button>
+      <div id="status" style="text-align:center;"></div>
+    </div>
+      <br><br>
+      <div class="how-to-steps">
+        <div class="step">
+          Your Code:
+          <label>
+              <input type="text" id="code">
+            </label>
+            <p>You can fetch automatically fetch your code by logging in to OfferZen and clicking <a href="https://www.offerzen.com/candidate/referral_redirect" target="_blank">here.</a> You'll need to refresh this page afterwards.</p>
+  
+          <br>
+        </div>
+        <div class="step">
+          Your Template Message:
+              <textarea id="msg" style="width: 300px; height: 150px;">Template</textarea>
+          <p>This message will be appended with your referral link.</p>
+  
+        </div>
+ 
+      </div>
+ 
+    </div>
+      
+
+    <div class="terms">
+    	<div class="container">
+        <h2>More information</h2>
+        <button class="accordion">Why does this exist?</button>
+        <div class="panel">
+          <p>We're on mission to reduce noise for developers in their job search. People trying to recruit you is useful when you're looking for work, but just noisey when you're not. The Dino referrer is a way for you to turn that noise into rewards, and help companies find great developers in the process instead of just ignoring them. You can read more about the project in the GitHub Repo. </p>
+        </div>
+        
+        <button class="accordion">Can I see the source code/contribute?</button>
+        <div class="panel">
+          <p>Yes! <a href="https://github.com/OfferZen-Community/dino-referrer" target="_blank">Here</a>'s the repo And you can fix it too (please). A total n00b made this as a side project to test some hypotheses. So if you're that way inclined, please feel free to contribute.</p>
+        </div>
+        
+        <button class="accordion">What are the terms and conditions?</button>
+        <div class="panel">
+          <p>We'll use UTM params to check conversions. They get stored in the user's cookie, but we'll tie all conversions to the initial form fill by default. You know as well as we do that this is error prone. This is an MVP, so we chose this route because it's fast and easier to trace.<br>
+          For sign ups, the company needs to be a real tech company that's likely going to hire devs some time. We reserve the right to make this call. They don't have to use us to get your reward. We want you to refer people, so we won't be Karen's about it. <Br>
+          For companies that sign subscriptions with us, we'll contact you to get all of your banking details etc. This is truly in POC/BETA phase, so please just give us a shout on GitHub if you have quesitons or suggestions.
+          </p>
+        </div>
+      </div>
+      
+    </div>
+
+
+  </main>
+  <footer>
+  <div class="footer-area">
+<div class="footer-container container">
+      <h3>Useful Links</h3>
+      <a href="https://github.com/OfferZen-Community/dino-referrer" target="_blank">Github Repo - we'd love your feedback/help!</a>
+      <p>Made in 2023 by Offerzen. <br>Open Source. Ideas (and code) are for free these days ;)</p>
+      <a href="https://www.offerzen.com"><img src="img/logo_white.png" alt="Offerzen Logo" class="footer-logo"/></a>
+  </div>
+</div>
+  </footer>
+  <script src="options.js"></script>
+</body>
+</html>
+
