@@ -1,10 +1,10 @@
 Welcome to the LinkedIn Referrer :)
 
 ## Check out the introduction video
-<a href="https://www.loom.com/share/086db1bc267f41bebdb1c24a8a365640">
+
     <p>DinoReferrer Introduction Video</p>
-    <img style="max-width:100%;" src="https://cdn.loom.com/sessions/thumbnails/086db1bc267f41bebdb1c24a8a365640-with-play.gif">
-  </a>
+
+  <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/086db1bc267f41bebdb1c24a8a365640" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 ## Installing the extention
 
