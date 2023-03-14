@@ -20,7 +20,7 @@ function save_options() {
   // stored in chrome.storage.
   function restore_options() {
     let message = `Thanks for reaching out. I'm not looking for work right now, but perhaps some time in the future again :)\r\n
-If you're looking for folks like me though, I can recommend trying out OfferZen. Everyone there is actively looking, curated, and they have a 99% response rate.\r\n
+If you're looking for folks like me though, I can recommend trying out a platform I use - OfferZen. Everyone there is actively looking, curated, and they have a 99% response rate.\r\n
 If you sign up using my link, I'll get rewards from OfferZen and you'll also get a special gift when you sign up.`;
     chrome.storage.sync.get({
       referralCode: 'Not set yet',
