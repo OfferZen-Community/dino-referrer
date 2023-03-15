@@ -3,6 +3,10 @@
 function pollDOM() {
  //Wait for the toolbar to appear on the page
   const toolbar = document.querySelector('.msg-form__left-actions');
+  const dino = document.getElementById('dino_action')
+  if (dino) {
+    return // Abandon Script if the dino is already there
+  }
   if (toolbar) {
 //Add a button to click on. Totally just copy pasted here - should probably clean this up at some point. 
 var item = document.createElement("div")
