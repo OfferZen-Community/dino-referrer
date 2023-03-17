@@ -4,7 +4,8 @@ function findAncestor(el, selector) {
 }
 
 // Run pollDOM() if the page loads on the messaging URL
-if (window.location.href.startsWith('https://www.linkedin.com/messaging') || window.location.href.startsWith('https://www.linkedin.com/inmail')) {
+//if (window.location.href.startsWith('https://www.linkedin.com/messaging') || window.location.href.startsWith('https://www.linkedin.com/inmail')) {
+if (window.location.href.startsWith('https://www.linkedin.com')) {
   pollDOM();
 }
 
@@ -19,23 +20,33 @@ document.addEventListener('click', (event) => {
   }
 });
 
-
 function pollDOM() {
-  console.log("Running PollDom")
- //Wait for the toolbar to appear on the page
-  const toolbar = document.querySelector('.msg-form__left-actions');
+  console.log("Running PollDom");
 
-  if (toolbar) {
+  const start = Date.now();
+  const timeout = 5000; // 5 seconds
 
-//Add a listener when the user clicks the button
-runUpdates()
+  const poll = function() {
+    //Wait for the toolbar to appear on the page
+    const toolbar = document.querySelector('.msg-form__left-actions');
 
-//If ther toolbar isn't there yet, try again later.
-  } else {
-    console.log("Polling");
-    setTimeout(pollDOM, 300); // try again in 300 milliseconds
-  }
+    if (toolbar) {
+      //Add a listener when the user clicks the button
+      runUpdates();
+
+    } else if (Date.now() - start < timeout) {
+      console.log("Polling");
+      setTimeout(poll, 300); // try again in 300 milliseconds
+
+    } else {
+      console.log("Polling timed out");
+    }
+  };
+
+  poll();
 }
+
+
 function runUpdates(){
 
   //Get the message from storage
@@ -46,7 +57,6 @@ chrome.storage.sync.get({
   var link = "\r\nhttps://www.offerzen.com/hire-developers?utm_source=referral&utm_medium=dinoref&utm_campaign="
   var cleanedMessage = items.referralMessage.replace(/\n/g, "</p><p>");
   const updatedMessage = `<p>` + cleanedMessage + "</p><p>" + link + `${items.referralCode}</p>`;
-  console.log(updatedMessage)
   appendDinoAction(updatedMessage);
 });
 
@@ -78,7 +88,6 @@ function appendDinoAction(updatedMessage) {
 //Add the listener
       const dinoActionButton = dinoAction.querySelector('button');
         dinoActionButton.addEventListener("click", function (event) {
-          console.log("Clicked Dino")
           const parentForm = event.target.closest("form");
           const messageBox = parentForm.querySelector('.msg-form__contenteditable[role="textbox"]');
           messageBox.innerHTML = updatedMessage;
