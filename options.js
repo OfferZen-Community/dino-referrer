@@ -25,14 +25,14 @@ If you sign up using my link, I'll get rewards from OfferZen and you'll also get
     chrome.storage.sync.get({
       referralCode: 'Not set yet',
       referralMessage: message
-    }, function(items) {
+    }, function(items) {    
       document.getElementById('code').value = items.referralCode;
       document.getElementById('msg').value = items.referralMessage;
       if (items.referralCode != 'Not set yet'){
         document.getElementById('headerCodeStatus').innerHTML = `<div class="code_present">🟢 Ready to refer. Your code is <span id="headerStatusCode"></span></div>`
         document.getElementById('headerStatusCode').textContent = items.referralCode;
       }
-
+      save_options()
     });
   }
   function setAccordians(){
@@ -61,4 +61,3 @@ If you sign up using my link, I'll get rewards from OfferZen and you'll also get
   document.addEventListener('DOMContentLoaded', setAccordians);
   document.getElementById('save').addEventListener('click',
       save_options);
-
