@@ -19,12 +19,12 @@ function save_options() {
   // Restores select box and checkbox state using the preferences
   // stored in chrome.storage.
   function restore_options() {
-    let message = `Thanks for reaching out. I'm not looking for work right now, but perhaps some time in the future again :)\r\n
+    let defaultMessage = `Thanks for reaching out. I'm not looking for work right now, but perhaps some time in the future again :)\r\n
 If you're looking for folks like me though, I can recommend trying out a platform I use - OfferZen. Everyone there is actively looking, curated, and they have a 99% response rate.\r\n
 If you sign up using my link, I'll get rewards from OfferZen and you'll also get a special gift when you sign up.`;
     chrome.storage.sync.get({
       referralCode: 'Not set yet',
-      referralMessage: message
+      referralMessage: ''
     }, function(items) {    
       document.getElementById('code').value = items.referralCode;
       document.getElementById('msg').value = items.referralMessage;
@@ -32,7 +32,12 @@ If you sign up using my link, I'll get rewards from OfferZen and you'll also get
         document.getElementById('headerCodeStatus').innerHTML = `<div class="code_present">🟢 Ready to refer. Your code is <span id="headerStatusCode"></span></div>`
         document.getElementById('headerStatusCode').textContent = items.referralCode;
       }
-      save_options()
+      //If the message is not yet set, then set it to the default message.
+      if (items.referralMessage == ''){
+        chrome.storage.sync.set({
+          referralMessage: defaultMessage
+        });
+      }
     });
   }
   function setAccordians(){
