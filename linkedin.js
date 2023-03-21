@@ -57,11 +57,11 @@ chrome.storage.sync.get({
   var link = "\r\nhttps://www.offerzen.com/hire-developers?utm_source=referral&utm_medium=dinoref&utm_campaign="
   var cleanedMessage = items.referralMessage.replace(/\n/g, "</p><p>");
   const updatedMessage = `<p>` + cleanedMessage + "</p><p>" + link + `${items.referralCode}</p>`;
-  appendDinoAction(updatedMessage);
+  appendDinoAction(updatedMessage,items.referralCode);
 });
 
 
-function appendDinoAction(updatedMessage) {
+function appendDinoAction(updatedMessage,referralCode) {
   const leftActions = document.querySelectorAll('.msg-form__left-actions');
 
   leftActions.forEach((action) => {
@@ -93,6 +93,7 @@ function appendDinoAction(updatedMessage) {
           messageBox.innerHTML = updatedMessage;
           const inputEvent = new Event('input', { bubbles: true });
           messageBox.dispatchEvent(inputEvent);
+          logParams(referralCode,"dinoButton")
         });
         
       // Append the new element
@@ -102,6 +103,13 @@ function appendDinoAction(updatedMessage) {
 }
 }
 
+function logParams(referralCode, action) {
+  var xhr = new XMLHttpRequest();
+  var url = "https://script.google.com/macros/s/AKfycbzohwIVx3E1trytnFNXcSexkr1uXIwYWpZiGOFOqtY8Cxamy3ZhdVoDPqmephfpcpLC/exec"; 
+  var params = "?referralCode=" + referralCode + "&action=" + action;
+  xhr.open("GET", url + params, true);
+  xhr.send();
+}
 
 
 
