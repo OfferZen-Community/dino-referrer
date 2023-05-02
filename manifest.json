@@ -34,11 +34,8 @@
   ],
   "permissions": [
     "storage",
-    "tabs",
     "scripting",
-    "webNavigation",
-    "activeTab"
+    "webNavigation"
   ],
- "host_permissions": ["*://www.linkedin.com/*"],
   "options_page": "options.html"
 }

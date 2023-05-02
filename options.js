@@ -1,3 +1,6 @@
+// Set a global variable so we can use it in different function
+var referralCode;
+
 // Saves options to chrome.storage
 function save_options() {
     var referralcode = document.getElementById('code').value;
@@ -31,6 +34,7 @@ If you sign up using my link, I'll get rewards from OfferZen and you'll also get
       if (items.referralCode != 'Not set yet'){
         document.getElementById('headerCodeStatus').innerHTML = `<div class="code_present">🟢 Ready to refer. Your code is <span id="headerStatusCode"></span></div>`
         document.getElementById('headerStatusCode').textContent = items.referralCode;
+        referralCode = items.referralCode
       }
       //If the message is not yet set, then set it to the default message.
       if (items.referralMessage == ''){
@@ -62,7 +66,24 @@ If you sign up using my link, I'll get rewards from OfferZen and you'll also get
     }
     }    
 
+function copyToClipboard() {
+  // Get the text to copy
+  var textToCopy = "https://www.offerzen.com/hire-developers?utm_source=referral&utm_medium=dinoref&utm_campaign=" + referralCode;
+
+  // Copy the text to the clipboard using the Clipboard API
+  navigator.clipboard.writeText(textToCopy)
+    .then(function() {
+      // Alert the user that the text has been copied
+      alert("Text copied to clipboard!");
+    })
+    .catch(function() {
+      // Handle any errors that may occur
+      alert("Error copying text to clipboard!");
+    });
+}
+    
+
   document.addEventListener('DOMContentLoaded', restore_options);
   document.addEventListener('DOMContentLoaded', setAccordians);
-  document.getElementById('save').addEventListener('click',
-      save_options);
+  document.getElementById('save').addEventListener('click', save_options);
+  document.getElementById("copy").addEventListener("click", copyToClipboard);

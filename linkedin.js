@@ -46,7 +46,6 @@ function pollDOM() {
   poll();
 }
 
-
 function runUpdates(){
 
   //Get the message from storage
