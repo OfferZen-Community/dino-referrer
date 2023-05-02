@@ -1,5 +1,8 @@
 Welcome to the LinkedIn Referrer :)
 
+## TLDR
+Install the extension (for now you need to load it unpacked, but it takes a couple minutes) and you'll see a little dinosoar appear in your LinkedIn messaging area. Clicking the dino responds to recruiters with a message referring them to OfferZen with your unique code. If they sign up, you get rewards like swag and cold hard $$
+
 ## Check out the introduction video
 <a href="https://www.loom.com/share/086db1bc267f41bebdb1c24a8a365640">
 <p>Watch the introduction video</p>
