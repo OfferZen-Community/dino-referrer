@@ -126,7 +126,9 @@ body {
     background-color: #e4ebef;
 }
 
-
+.how-to-steps--link {
+  color:#2f96f4;
+}
 /* Terms area */
 
 /* Style the buttons that are used to open and close the accordion panel */
