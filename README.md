@@ -29,7 +29,7 @@ If you sign up using my link, I'll get rewards from OfferZen and you'll also get
 
 https://www.offerzen.com/hire-developers?utm_source=referral&utm_medium=dinoref&utm_campaign={{YOURCODE}}
 ```
-Remember to replace `{{YOURCODE}}` with the link you got in Step 1. 
+Remember to replace `{{YOURCODE}}` with the link you got in Step 1. You can also copy your full link from the settings page.
 
 3.Send to people that reach out to you. It doesn't have to be on LinkedIn - you can refer people over any channel. 
 
