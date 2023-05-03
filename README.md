@@ -12,9 +12,15 @@ Install the extension (for now you need to load it unpacked, but it takes a coup
 
 
 ## Installing the extention
-
 We still need to submit it to the Chrome webstore. For now, you can load it unpacked using these instructions:
-https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/
+
+1. Go to the Extensions page by entering chrome://extensions in a new tab. (By design chrome:// URLs are not linkable.)
+2. Enable Developer Mode by clicking the toggle switch next to Developer mode.
+3. Click the Load unpacked button and select the extension directory (this repo on your local)
+<img width="425" alt="image" src="https://user-images.githubusercontent.com/33951316/235889728-6cc75f8b-b396-40d2-bfa7-cf0ba20cc2e0.png">
+
+
+See the [Chrome Extension docs](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/) for more info and how to reload the extension as you make changes. 
 
 ## Manual Workflow
 Don't want to use Chrome but still want to take part? Here's how to participate manually. 
